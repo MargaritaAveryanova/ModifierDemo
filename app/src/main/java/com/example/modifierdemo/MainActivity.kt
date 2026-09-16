@@ -34,8 +34,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DemoScreen(modifier: Modifier = Modifier) {
     val mymodifier = modifier
-        .border(width = 2.dp, color = Color.Red)
         .padding(all = 10.dp)
+        .border(width = 2.dp, color = Color.Red)
+
 
     Text(
         "Hello Compose",
