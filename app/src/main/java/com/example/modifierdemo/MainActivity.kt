@@ -21,8 +21,11 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.painterResource
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.draw.clip
 import com.example.modifierdemo.ui.theme.ModifierDemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -58,7 +61,11 @@ fun DemoScreen(modifier: Modifier = Modifier) {
         fontWeight = FontWeight.Bold
     )
         Spacer(Modifier.height(16.dp))
-        CustomImage(R.drawable.kitty)
+        CustomImage(R.drawable.kitty,
+            Modifier
+                .padding(16.dp)
+                .width(270.dp)
+                .clip(shape = RoundedCornerShape(30.dp)))
     }
 
 }
